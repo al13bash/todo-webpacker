@@ -1,0 +1,148 @@
+$dirtypink: #e5989f
+$black: #333
+$purple: #6d639a
+$pink: #d63f74
+$lightpink: #e996b3
+$white: #fefefe
+$grey: rgba($black, .5)
+$blue: #4f83b7
+$shadow: 3px 3px 17px rgba(0,0,0,0.7)
+
+*
+  font-family: 'Open Sans', sans-serif
+  font-weight: bold
+  color: $black
+  border-color: $black 
+
+\::-webkit-input-placeholder
+  color: rgba($pink, .5)
+
+\:-moz-placeholder
+  color: rgba($pink, .5)
+
+\::-moz-placeholder
+  color: rgba($pink, .5)
+
+\:-ms-input-placeholder
+  color: rgba($pink, .5)
+
+body
+  background-color: $dirtypink
+
+ul
+  list-style-type: none
+  padding: 0
+
+button
+  cursor: pointer
+  &:focus, &:active
+    outline: none
+
+.textCenter
+  text-align: center
+  font-family: 'Amatic SC', cursive
+  font-size: 65px
+  padding-top: 60px
+  line-height: 0.5
+
+.removeBtn
+  position: absolute
+  right: 8px
+
+#container
+  position: relative
+  box-sizing: border-box
+  background-color: white
+  text-align: center
+  max-width: 700px
+  min-height: 350px
+  margin: 60px auto 0 auto
+  padding: 20px 65px 50px 65px
+  box-shadow: $shadow
+
+  .flowers
+    width: 450px
+    position: absolute
+    top: 2px
+    right: 120px
+  
+  h2
+    margin-bottom: 30px
+    color: $black
+  
+  #form
+    margin-bottom: 30px
+
+    input
+      font-size: 17px 
+      border-top: none
+      border-left: none
+      border-right: none
+      background: transparent
+      padding: 7px 10px
+      width: 90%
+      color: $black
+      border-color: $lightpink
+      &:focus, &:active
+        outline: none
+        border-color: $pink
+    
+  #info
+    padding: 7px
+    text-align: left
+    color: $grey
+
+  button.add-todo
+    border-radius: 5px 5px 5px 0px
+    border: solid 1px $pink
+    padding: 7px 10px
+    background: rgba($pink, .8)
+    width: 10%
+    min-width: 20px
+    color: $white
+    line-height: 1
+    font-size: 18px
+    &:hover, &:active
+      background: rgba($pink, 1)
+  
+  button, input
+    vertical-align: middle
+    height: 35px
+    box-sizing: border-box
+  
+  #acu
+    text-align: left
+    padding: 7px
+
+  #list 
+    text-align: left
+
+    .done-task
+      text-decoration: line-through
+
+      &:hover
+        .removeBtn
+          visibility: visible
+
+    .todos
+      border-bottom: 2px solid rgba(0,0,0,0.1)
+      position: relative
+      margin: 15px auto
+      padding: 7px 28px 7px 47px
+      color: black
+      font-weight: normal
+
+      &:hover
+        border-color: rgba(0,0,0,0.3)
+        cursor: pointer 
+      
+      .removeBtn
+        visibility: hidden
+
+      .list-marker
+        transform: rotate(35deg)
+        position: absolute
+        left: 0px
+        top: 2px
+        width: 42px
+        padding-right: 10px
